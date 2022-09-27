@@ -1,0 +1,66 @@
+{{#if errors}}
+{{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+    </div>
+{{/each}}
+{{/if}}
+
+<div class="container">
+    <h2 class="p-4">Register</h2>
+<div class="row p-4">
+    <div class="col-md-8">
+        <div class="justify">
+            <form action="register" method="POST">
+            <div class="p-2">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" required>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" required>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="form-group">
+                    <label for="email"><strong>Email</strong> </label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="form-group">
+                    <label for="comfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" name="comfirmPassword" required>
+                </div>
+            </div>
+            <div class="form-group p-2">
+                <label for="role">Role</label>
+                <select class="form-control" name="role" id="role" required>
+                    <option value="admin">Admin</option>
+                    <option value="editor">Editor</option>
+                    <option value="superAdmin">Super Admin</option>
+                </select>
+            </div>
+            <div class="form-group p-2">
+                <button style="width: 100%;" class="btn btn-primary" type="submit">Register</button>
+            </div>
+
+
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>

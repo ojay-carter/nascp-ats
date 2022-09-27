@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Caffeinna Creatives">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Work With Us </title>
+    <!-- Favicon -->
+    <link rel="icon" href="../images/fav.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,&amp;display=swap" rel="stylesheet">
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/line-awesome.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/daterangepicker.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/jquery.filer.css">
+    <link rel="stylesheet" href="../css/jquery.filer-dragdropbox-theme.css">
+    <link rel="stylesheet" href="../css/select2.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53GR45TP8L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-53GR45TP8L');
+</script>
+</head>
+<body>
+<!-- start per-loader -->
+<div class="loader-container">
+    <div class="loader-circle">
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+</div>
+<!-- end per-loader -->
+
+<!-- ================================
+            START HEADER AREA
+================================= -->
+<header class="header-area header-area-2" style="background-color: #fff;">
+    <div class="header-menu-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="menu-full-width Snk-in">
+                        <div class="logo">
+                            <a href="/"><img src="../images/logo.png" alt="logo"></a>
+                        </div><!-- end logo -->
+                        <div class="main-menu-content">
+                            
+                        </div><!-- end main-menu-content -->
+                        <div class="logo-right-content">
+                            <div class="side-menu-open">
+                                <span class="menu__bar"></span>
+                                <span class="menu__bar"></span>
+                                <span class="menu__bar"></span>
+                            </div><!-- end side-menu-open -->
+                        </div><!-- end logo-right-content -->
+                    </div><!-- end menu-full-width -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container-fluid -->
+    </div><!-- end header-menu-wrapper -->
+    <div class="side-nav-container">
+        <div class="humburger-menu">
+            <div class="humburger-menu-lines side-menu-close"></div><!-- end humburger-menu-lines -->
+        </div><!-- end humburger-menu -->
+        <div class="side-menu-wrap Snk-in">
+            
+        </div><!-- end side-menu-wrap -->
+        <div class="side-menu-wrap Snk-out" style="display: none;">
+            
+            
+        </div><!-- end side-menu-wrap -->
+    </div><!-- end side-nav-container -->
+</header>
+<!-- ================================
+         END HEADER AREA
+================================= -->
+<section class="breadcrumb-area job-single-breadcrumb">
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-content d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="bread-details d-flex">
+                            <div class="bread-img flex-shrink-0">
+                            </div>
+                            <div class="job-detail-content">
+                                <h2  class="widget-title font-size-30 text-white pb-1"><span id="jobTitle"></span>Work With Us</h2>
+                                
+                            </div><!-- end job-detail-content -->
+                        </div><!-- end bread-details -->
+                    </div><!-- end breadcrumb-content -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end breadcrumb-wrap -->
+</section><!-- end breadcrumb-area -->
+<!-- ================================
+    START CARD AREA
+================================= -->
+
+<section class="employer-details padding-top-100px padding-bottom-70px">
+    <div class="container">
+        <div class="col-lg-12">
+            <h2 class="widget-title" style="font-size: 30px;">Adverts</h2>
+            <div class="title-shape"></div>
+        </div>
+        <div class="row">
+            {{#each jobs}}
+            <div class="col-lg-4">
+                <div class="single-employer-wrap">
+                    <div class="employer-job-post padding-top-20px">
+                        <div class="job-content margin-top-35px">
+                            <div class="job-card job-card-layout">
+                                <div class="job-card-details d-flex align-items-center justify-content-between">
+                                    <div class="card-head d-flex align-items-center">
+                                        <div class="company-title-box">
+                                            <h4 class="card-title mb-1"><a href="/jobs/{{slug}}">{{position}} </a> </h4>
+                                            <p class="card-sub">
+                                                <span class="mr-2"><i class="la la-map-marker color-text-2"></i> {{location}}</span>
+                                                <span class="mr-2 "><i class="la la-clock color-text-2"></i><span class="dateString"> {{posted}}</span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end job-card -->
+                        </div><!-- end job-content -->
+                    </div><!-- end employer-job-post-->
+                </div><!-- end employer-job-post-->
+            </div>   
+            {{/each}}    
+                 
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- ================================
+    END CARD AREA
+================================= -->
+
+<div class="section-block"></div>
+<!-- ================================
+       START FOOTER AREA
+================================= -->
+<section class="footer-area padding-top-90px padding-bottom-30px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copy-right margin-top-50px padding-top-30px">
+                    <p class="copy__desc">
+                        Copyright &copy;2022 NASCP
+                    </p>
+                    <ul class="list-items">
+                        <li ><a style="color: #fff;" href="https://caffeinna.com.ng">Caffeinna Creatives</a></li>
+                    </ul>
+                </div><!-- end copy-right -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- ================================
+       START FOOTER AREA
+================================= -->
+
+<!-- start back-to-top -->
+<div id="back-to-top">
+    <i class="fa fa-angle-up" title="Go top"></i>
+</div>
+<!-- end back-to-top -->
+
+<!-- Template JS Files -->
+<script src="https://unpkg.com/moment"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/isotope-3.0.6.min.js"></script>
+<script src="../js/select2.min.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/daterangepicker.js"></script>
+<script src="../js/purecounter.js"></script>
+<script src="../js/jquery.filer.min.js"></script>
+<script src="../js/progresscircle.js"></script>
+<script src="../js/smooth-scrolling.js"></script>
+<script src="../js/main.js"></script>
+
+<script>
+                 
+         
+    const dateString = document.getElementsByClassName('dateString');
+
+    $.each(dateString, function(index, value){
+        var datte = value.innerHTML;
+        var d = new Date(datte)
+        var cleanedDate = d.toDateString();
+        value.innerHTML= cleanedDate;
+
+    })
+
+</script>
+</body>
+
+</html>

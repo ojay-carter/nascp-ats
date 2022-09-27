@@ -1,0 +1,134 @@
+
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">New Job Advert</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Jobs</a></li>
+                                        <li class="breadcrumb-item active">New Job</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+<form action="new-job" method="POST">
+                    <div class="row">
+                        <div class="col-xxl-8">
+                            <div class="card">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Post a Job</h4>
+                                    <div class="flex-shrink-0">
+                                        <div class="form-check form-switch form-switch-right form-switch-md">
+                                            <label for="form-grid-showcode" class="form-label text-muted">Go Live</label>
+                                            <input class="form-check-input " type="checkbox" id="">
+                                        </div>
+                                    </div>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                   <div class="live-preview">
+                                        <form action="javascript:void(0);">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label for="position" class="form-label">Job Title</label>
+                                                        <input type="text" class="form-control" name="position" placeholder="Enter job title" id="position" required>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-6">
+                                                    <div>
+                                                        <label for="start" class="form-label">Job Start Date</label>
+                                                        <input type="date" class="form-control" id="start" name="start">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="duration" class="form-label">Duration</label>
+                                                        <input type="text" class="form-control" placeholder="e.g 5 years" name="duration" id="duration">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="location" class="form-label">Location</label>
+                                                        <input type="text" class="form-control" placeholder="e.g Abuja, Nigeria" id="" name="location" required>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-6">
+                                                    <div>
+                                                        <label for="deadline" class="form-label">Application Deadline</label>
+                                                        <input type="date" class="form-control" id="deadline" name="deadline" required>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label for="background" class="form-label">Background</label>
+                                                        <textarea class="form-control" id="background" rows="5" name="background" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label for="responsibility" class="form-label">Responsibilities</label>
+                                                        <textarea class="form-control" id="responsibility" rows="3" name="responsibility" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label for="deliverables" class="form-label">Deliverables</label>
+                                                        <textarea class="form-control" id="deliverables" rows="2" name="deliverables"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label for="qualification" class="form-label">Qualification & Skills</label>
+                                                        <textarea class="form-control" id="qualification" rows="3" name="qualification" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="contract" class="form-label">Contract & Accountability</label>
+                                                        <textarea class="form-control" id="contract" rows="3" name="contract"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="renumeration" class="form-label">Renumeration</label>
+                                                        <textarea class="form-control" id="renumeration" rows="3" name="renumeration"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                            </div>
+                                            <!--end row-->
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                    </div>
+                    <!--end row-->
+</form>
+                    
+                <script>
+                        CKEDITOR.replace( 'responsibility' );
+                        CKEDITOR.replace( 'qualification' );
+                        CKEDITOR.replace( 'deliverables' );
+                </script>

@@ -1,0 +1,114 @@
+<div class="container-fluid px-4">
+    <a href="new-job-post" class="btn btn-lg btn-primary" style="margin-top: 15px; float: right;">Create New Job Post</a>
+    <h2 class="p-4 text-center">All Job Posts</h2>
+
+    
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                All Company Reviews
+                            </div>
+{{#if userRole}}
+
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Position</th>
+                                            <th>Company Name</th>
+                                            <th>Location</th>
+                                            <th>Author</th>
+                                            <th>Date Posted</th>
+                                            <th>Actions </th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Position</th>
+                                            <th>Company Name</th>
+                                            <th>Location</th>
+                                            <th>Author</th>
+                                            <th>Date Posted</th>
+                                            <th>Actions </th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {{#each jobs}}
+                                        <tr>
+                                            <td>{{jobTitle}}</td>
+                                            <td>{{recuiter}}</td>
+                                            <td>{{location}}</td>
+                                            <td>{{user}}</td>
+                                            <td class="dateString">{{posted}}</td>
+                                            <td class="d-flex justify-content-around">
+                                                <a href="edit-job-post/{{id}}" class="btn btn-sm btn-success ">View </a>
+                                                <a href="edit-job-post/{{id}}" class="btn btn-sm btn-warning ">Edit </a>
+
+                                                <form action="delete-job-post/{{id}}?newMethod=DELETE" method="post" >
+                                                    <button class="btn btn-sm btn-danger" type="submit">Delete </button>
+                                                </form>
+                                            
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+{{else}}
+
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Position</th>
+                                            <th>Company Name</th>
+                                            <th>Location</th>
+                                            <th>Date Posted</th>
+                                            <th>Actions </th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Position</th>
+                                            <th>Company Name</th>
+                                            <th>Location</th>
+                                            <th>Date Posted</th>
+                                            <th>Actions </th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {{#each jobs}}
+                                        <tr>
+                                            <td>{{jobTitle}}</td>
+                                            <td>{{recuiter}}</td>
+                                            <td>{{location}}</td>
+                                            <td class="dateString">{{posted}}</td>
+                                            <td class="d-flex justify-content-around">
+                                                <a href="edit-job-post/{{id}}" class="btn btn-sm btn-success ">View </a>
+                                                <a href="edit-job-post/{{id}}" class="btn btn-sm btn-warning ">Edit </a>
+
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+
+{{/if}}
+                        </div>
+</div>
+
+<script>
+         
+    const dateString = document.getElementsByClassName('dateString');
+
+    $.each(dateString, function(index, value){
+        var datte = value.innerHTML;
+        var d = new Date(datte)
+        var cleanedDate = d.toDateString();
+        value.innerHTML= cleanedDate;
+
+    })
+</script>

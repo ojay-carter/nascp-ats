@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Caffeinna Creatives">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description " content="{{job.seo_description}}">
+    <meta name="keywords" content="{{job.seo_keywords}}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="/images/logo.png">
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content="" />
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content="Jobatrac"/>
+    <meta property="og:type" content="job recruitment"/>
+    <title>{{job.position}}- NASCP</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/fav.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,&amp;display=swap" rel="stylesheet">
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/line-awesome.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/daterangepicker.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/jquery.filer.css">
+    <link rel="stylesheet" href="/css/jquery.filer-dragdropbox-theme.css">
+    <link rel="stylesheet" href="/css/select2.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "{{job.jobTitle}}",
+    "description": "{{job.description}}",
+    "hiringOrganization" : {
+        "@type": "Organization",
+        "name": "{{job.recuiter}}",
+        "sameAs": "{{job.applyBtn}}", 
+        "logo": "{{job.logo}}"
+    },
+    "industry": "{{job.industry}}",
+    "employmentType": "{{job.jobType}}",
+    "workHours": "",
+    "datePosted": "{{job.posted}}",
+    "validThrough": "{{job.deadline}}",
+    "jobLocation": {
+        "@type": "Place",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{job.location}}",
+        "addressLocality": "{{job.location}}",
+        "postalCode": "",
+        "addressCountry": "NG"
+        }
+    },
+    "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "NGN",
+        "value": {
+        "@type": "QuantitativeValue",
+        "minValue": "",
+        "maxValue": "{{job.salary}}",
+        "unitText": "MONTH"
+        }
+    },
+    "responsibilities": "{{job.responsibilities}}",
+    "qualifications": "{{job.qualifications}}"
+}
+</script>
+</head>
+<body>
+<!-- start per-loader -->
+<div class="loader-container">
+    <div class="loader-circle">
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+</div>
+<!-- end per-loader -->
+
+<!-- ================================
+            START HEADER AREA
+================================= -->
+<header class="header-area header-area-2" style="background-color: #fff;">
+    <div class="header-menu-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="menu-full-width Snk-out">
+                        <div class="logo">
+                            <a href="/"><img src="../images/logo.png" alt="logo"></a>
+                        </div><!-- end logo -->
+                        <div class="main-menu-content">
+                            
+                            <div class="side-menu-open">
+                                <span class="menu__bar"></span>
+                                <span class="menu__bar"></span>
+                                <span class="menu__bar"></span>
+                            </div><!-- end side-menu-open -->
+                        </div><!-- end logo-right-content -->
+                    </div><!-- end menu-full-width -->
+                    <div id="Snk-P" style="display: none;" class="menu-full-width Snk-in">
+                        <div class="logo">
+                            <a href="/"><img src="../images/logo.png" alt="logo"></a>
+                        </div><!-- end logo -->
+                        <div class="main-menu-content">
+                            
+                        </div><!-- end main-menu-content -->
+                        <div class="logo-right-content">
+                            <div class="side-menu-open">
+                                <span class="menu__bar"></span>
+                                <span class="menu__bar"></span>
+                                <span class="menu__bar"></span>
+                            </div><!-- end side-menu-open -->
+                        </div><!-- end logo-right-content -->
+                    </div><!-- end menu-full-width -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container-fluid -->
+    </div><!-- end header-menu-wrapper -->
+    <div class="side-nav-container">
+        <div class="humburger-menu">
+            <div class="humburger-menu-lines side-menu-close"></div><!-- end humburger-menu-lines -->
+        </div><!-- end humburger-menu -->
+        <div class="side-menu-wrap Snk-in" style="display: none;">
+            
+        </div><!-- end side-menu-wrap -->
+    </div><!-- end side-nav-container -->
+</header>
+<!-- ================================
+         END HEADER AREA
+================================= -->
+
+<!-- ================================
+    START BREADCRUMB AREA
+================================= -->
+<section class="breadcrumb-area job-single-breadcrumb">
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-content d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="bread-details d-flex">
+                            <div class="bread-img flex-shrink-0">
+                            </div>
+                            <div class="job-detail-content">
+                                <h2  class="widget-title font-size-30 text-white pb-1"><span id="jobTitle"></span>{{job.position}}</h2>
+                                <p class="font-size-16 mt-1 text-white">
+                                    <span class="mr-2 mb-2 d-inline-block"><i class="la la-briefcase mr-1"></i><span  id="companyName">NASCP</span></span>
+                                    <span  class="mr-2 mb-2 d-inline-block"><i class="la la-map-marker mr-1"></i><span id="companyLocation">{{job.location}}</span></span>
+                                    <br>
+                                    <span class="mr-2"><i class="la la-calendar mr-1"></i><span id="deadline" class="date2"> {{job.deadline}} (Deadline)</span></span>
+                                    <!--<span><i class="la la-eye mr-1"></i>Views 2363</span>  -->
+                                </p>
+                            </div><!-- end job-detail-content -->
+                        </div><!-- end bread-details -->
+                        <div class="bread-action loggedIn">
+                            <ul class="listing-info">
+                                <li>
+                                    <p></p> 
+                                </li>
+                                <li>
+                                    <button id="appJob" type="button" class="theme-btn border-0 appNow" data-toggle="modal" data-target=".modal-action-form">Apply Now</button>
+                                </li>
+                            </ul>
+                        </div><!-- end bread-action -->
+                    </div><!-- end breadcrumb-content -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end breadcrumb-wrap -->
+</section><!-- end breadcrumb-area -->
+<!-- ================================
+    END BREADCRUMB AREA
+================================= -->
+
+<!-- ================================
+    START JOB DETAILS
+================================= -->
+<section class="job-details padding-top-100px padding-bottom-80px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="single-job-wrap">
+                    <div class="job-description padding-bottom-35px">
+                        <h2 class="widget-title">Background:</h2>
+                        <div class="title-shape"></div>
+                        <p id="jobDesc" class="mt-3 mb-3">{{job.background}}</p>
+                    </div><!-- end job-description -->
+                    <div class="job-description padding-bottom-35px rich-text" style="padding-left: 15px;">
+                        <h2 class="widget-title">Responsibilities:</h2>
+                        <div class="title-shape"></div>
+                        <p id="jobMission" class="mt-3 mb-3">{{job.responsibilities}}
+                        </p>
+                    </div><!-- end job-description -->
+                    <div class="job-description padding-bottom-35px rich-text"  style="padding-left: 15px;">
+                        <h2 class="widget-title">Qualifications & Skills:</h2>
+                        <div class="title-shape"></div>
+                        <p id="reqProfile" class="mt-3 mb-3">{{job.qualification}}</p>
+                    </div><!-- end job-description -->
+                    <div class="job-description padding-bottom-35px rich-text"  style="padding-left: 15px;">
+                        <h2 class="widget-title ">Deliverables:</h2>
+                        <div class="title-shape"></div>
+                        <p id="deliverable" class="mt-3 mb-3">{{job.deliverables}}</p>
+                    </div><!-- end job-description -->
+                    <div class="job-description padding-bottom-35px rich-text"  style="padding-left: 15px;">
+                        <h2 class="widget-title">Contracting & Accountability:</h2>
+                        <div class="title-shape"></div>
+                        <p id="" class="mt-3 mb-3">{{job.accountability}}</p>
+                    </div><!-- end job-description -->
+                    <div class="job-description padding-bottom-35px rich-text"  style="padding-left: 15px;">
+                        <h2 class="widget-title">Renumeration:</h2>
+                        <div class="title-shape"></div>
+                        <p id="" class="mt-3 mb-3">{{job.renumeration}}</p>
+                    </div><!-- end job-description -->
+
+
+
+                    <div id="completeH" class="user-action-card section-bg p-5 radius-round d-flex align-items-center justify-content-between koker">
+                        <div  class="user-action-heading ">
+                            <h2 id="appNow" class="widget-title pb-2">How to apply</h2>
+                            <p id="appNow1">  Click on <span class="color-text" >"Apply"</span> below and to fill and submit an application instantly  </p>
+                        </div> 
+                        <div class="btn-box ">
+                            <button id="appJob" type="button" class="theme-btn border-0 appNow" data-toggle="modal" data-target=".modal-action-form">Apply </button>
+                        </div>
+                    </div> 
+                </div><!-- end single-job-wrap -->
+            </div><!-- end col-lg-8 -->
+            <div class="col-lg-4">
+                <div class="sidebar mt-0">
+                    <div class="sidebar-widget">
+                        <div class="billing-form-item mb-0">
+                            <div class="billing-title-wrap">
+                                <h3 class="widget-title">Job Details</h3>
+                                <div class="title-shape"></div>
+                            </div><!-- billing-title-wrap -->
+                            <div class="billing-content">
+                                <div class="info-list static-info">
+                                    <ul>
+                                        <li class="mb-3 d-flex align-items-center"><p><i class="la la-map-marker"></i> <span class="color-text-2 font-weight-medium mr-1">Location:</span> <span id="cmpLoc">{{job.location}}</span></p></li>
+                                        <li class="mb-3 d-flex align-items-center"><p><i class="la la-bullhorn"></i> <span class="color-text-2 font-weight-medium mr-1 ">Start Date:</span> <span id="cmpExp" class="dateString">{{job.start_date}}</span></p></li>
+                                        <li class="mb-3 d-flex align-items-center"><p><i class="la la-desktop"></i> <span class="color-text-2 font-weight-medium mr-1">Job Type:</span> <span id="cmpType">Contract</span></p></li>
+                                        <li class="mb-3 d-flex align-items-center"><p><i class="la la-briefcase"></i> <span class="color-text-2 font-weight-medium mr-1">Duration:</span> <span id="cmpInd">{{job.duration}}</span></p></li>
+                                <!--        <li class="d-flex align-items-center"><p><i class="la la-graduation-cap"></i> <span class="color-text-2 font-weight-medium mr-1">Qualification:</span> <span id="cmpQual">{{job.location}}</span></p></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end sidebar-widget -->
+                    <div class="sidebar-widget social-widget">
+                        <div class="billing-form-item">
+                            <div class="billing-title-wrap">
+                                <h3 class="widget-title">Interesting? Share it!</h3>
+                                <div class="title-shape"></div>
+                            </div>
+                            <div class="billing-content">
+                                <ul class="social-profile">
+                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Share on Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Share on Instagram"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- end sidebar-widget -->
+                </div><!-- end sidebar -->
+            </div><!-- end col-lg-4 -->
+        </div><!-- end row -->
+        
+    </div><!-- end container -->
+</section><!-- end job-details -->
+<!-- ================================
+    END JOB DETAILS
+================================= -->
+
+<div class="section-block">
+</div>
+<!-- ================================
+       START FOOTER AREA
+================================= -->
+<section class="footer-area padding-top-90px padding-bottom-30px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copy-right margin-top-50px padding-top-30px">
+                    <p class="copy__desc">
+                        Copyright &copy;2022 NASCP
+                    </p>
+                    <ul class="list-items">
+                        <li ><a style="color: #fff;" href="https://caffeinna.com.ng">Caffeinna Creatives</a></li>
+                    </ul>
+                </div><!-- end copy-right -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!-- ================================
+       START FOOTER AREA
+================================= -->
+
+<!-- start back-to-top -->
+<div id="back-to-top">
+    <i class="fa fa-angle-up" title="Go top"></i>
+</div>
+<!-- end back-to-top -->
+
+<!-- end modal-shared -->
+<div class="modal-form">
+    <div class="modal fade modal-action-form" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div id="modal-loggedout" class="modal-content">
+                <div class="modal-top">
+                    <button type="button" class="close close-arrow" data-dismiss="modal" aria-label="Close" style="z-index: -1;">
+                        <span aria-hidden="true" class="la la-close mb-0"></span>
+                    </button>
+
+                    <h3 class="widget-title" style="text-align: center; color:#048863; font-size:20px;"><span class="la la-key-o mb-0"></span> How to Apply</h3>
+                    <p class="mt-2" style="font-size: 12px;">
+                        Fill and submit the form by attaching your current CV and a cover letter. All fields are mandatory.
+                    </p>
+                    <hr>
+                    <form id="jobForm" method="POST" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="input-box">
+                                                <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">First Name</h4>
+                                                <div class="form-group">
+                                                    <input id="first" class="form-control" type="text" name="first_name" placeholder="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-6">
+                                            <div class="input-box">
+                                                
+                                                <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">Last Name</h4>
+                                                <div class="form-group">
+                                                    <input id="last" class="form-control" type="text" name="last_name" placeholder="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="input-box">
+                                                <label class="label-text">Gender<span style="color: red;">*</span></label>
+                                                <div class="form-group">
+                                                    <select id="gender" class="category-option-field" required>
+                                                        <option value="Select" selected disabled>Select</option>
+                                                        <option value="1" >Male</option>
+                                                        <option value="2" >Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-box">
+                                                <label class="label-text">Location<span style="color: red;">*</span></label>
+                                                <div class="form-group">
+                                                    <select id="location" class="category-option-field" required>
+                                                        <option value="Select" selected disabled>Select</option>
+                                                        <option value="1" >Abia</option>
+                                                        <option value="2" >Adamawa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>-->
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="input-box">
+                                                <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">Email</h4>
+                                                <div class="form-group">
+                                                    <input id="email" class="form-control" type="email" name="email" placeholder="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6" style="display: none;">
+                                            <div class="input-box">
+                                                <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">Position</h4>
+                                                <div class="form-group">
+                                                    <input id="position" class="form-control" type="text" name="position" value="{{job.position}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6" style="display: none;">
+                                            <div class="input-box">
+                                                <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">Tag</h4>
+                                                <div class="form-group">
+                                                    <input id="id" class="form-control" type="text" name="position_id" value="{{job.id}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-lg-6">
+                                            <div class="input-box">
+                                                <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">Tel</h4>
+                                                <div class="form-group">
+                                                    <input id="tel" class="form-control" type="tel" name="tel" placeholder="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="user-form-action">
+                                            <div class="billing-form-item section-bg border-0">
+                                                <div class="billing-content">
+                                                    <div class="cv-profile-action-wrap">
+                                                        <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">CV</h4>
+                                                        <div class="user-profile-action mt-4">
+                                                            <div class="upload-btn-box">
+                                                                    <input class="clTab" type="file"  id="filer_input44"  accept=".docx, .pdf" name="cover">
+                                                            </div>
+                                                        </div><!-- end user-profile-action -->
+                                                    </div><!-- end cv-profile-action-wrap -->
+                                                </div><!-- end billing-content -->
+                                            </div>
+                                        </div>
+                                    </div><!-- end col-lg-12 -->
+                </div>
+
+                <div class="contact-form-action">
+                        <div class="btn-box ">
+                           <button id="appNow" type="submit" class="theme-btn border-0" style="width: 100%;">Apply</button></a>
+                        </div>
+                </div><!-- end contact-form-action -->
+                </form>
+                
+                    <h4 class="modal-title pb-0" style="font-size: 14px; color:#048863">Disclaimer</h4>
+                    <p class="mt-2" style="font-size: 12px">
+                       <span style="color:#048863">i.</span>   Late submissions will not be accepted. 
+                        <span style="color:#048863">ii.</span> We shall verify any or all documents and claims made by applicants and will disqualify applicants with falsified documents and claims.
+                        <span style="color:#048863">iii.</span> If it is determined that submitted documents and claims have been falsified, the applicant may face prosecution in a court of Law.
+                        <span style="color:#048863">iv.</span> We shall not be held responsible for any disqualified proposal as a result of any omission or deletion relating to the submission guidelines.
+                        <span style="color:#048863">v.</span> This advertisement shall not construe as a contract to any applicant, nor shall it entitle any Consultant submitting documents to claim any indemnity from us.
+                        <span style="color:#048863">vi.</span> We are not bound to shortlist any participant, and reserves the right to annul the engagement process at any time without incurring any liabilities or providing a reason.
+                    </p>
+                    
+                </div>
+            </div><!-- end modal-content -->
+          
+        </div><!-- end modal-dialog -->
+    </div><!-- end modal -->
+</div><!-- end modal-form -->
+<!-- end modal-shared -->
+
+
+<!-- Template JS Files -->
+<script src="https://unpkg.com/moment"></script>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/isotope-3.0.6.min.js"></script>
+<script src="/js/select2.min.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/daterangepicker.js"></script>
+<script src="/js/purecounter.js"></script>
+<script src="/js/jquery.filer.min.js"></script>
+<script src="/js/smooth-scrolling.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYzby4yYDVaXPmtu4jZAGR258K6IYwjIY&amp;libraries"></script>
+<script src="/js/gmap-script.js"></script>
+<script src="/js/progresscircle.js"></script>
+<script src="/js/main.js"></script>
+<!--<script src="/js/serve.js"></script>-->
+<script>
+      var decoded = $('#jobMission').text();
+      $('#jobMission').html(decoded);
+
+      var decoded2 = $('#reqProfile').text();
+      $('#reqProfile').html(decoded2);
+
+      var devl = $('#deliverable').text();
+      $('#deliverable').html(devl);
+
+      console.log('where')
+      
+        
+    const dateString = document.getElementsByClassName('dateString');
+    const dateString2 = document.getElementsByClassName('date2');
+
+    $.each(dateString, function(index, value){
+        var datte = value.innerHTML;
+        var d = new Date(datte)
+        var cleanedDate = d.toDateString();
+        value.innerHTML= cleanedDate;
+
+    })
+
+    $.each(dateString2, function(index, value){
+        var datte = value.innerHTML;
+        var d = new Date(datte)
+        var cleanedDate = d.toString();
+        value.innerHTML= cleanedDate;
+
+    })
+
+ 
+
+   
+</script>
+</body>
+
+</html>

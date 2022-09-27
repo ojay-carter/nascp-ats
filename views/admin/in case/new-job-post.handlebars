@@ -1,0 +1,145 @@
+<div class="container-fluid px-4">
+    <h2 class="p-4 ">Create New Job Post</h2>
+        <div class="" style="justify-content:center;" >
+            <div class="row p-4">
+                <div class="col-md-8">
+                    <form action="new-job-post" method="POST" enctype="multipart/form-data">
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="name"><b>Recruiting Company</b></label>
+                                <input class="form-control" type="text" name="name" placeholder="Enter name" required>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="location"><b>Location</b></label>
+                                <input class="form-control" type="text" name="location" placeholder="Enter company's location" required>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="title"><b>Job Title</b></label>
+                                <input class="form-control" type="text" name="title" placeholder="Enter industry" required>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="industry"><b>Industry</b></label>
+                                <input class="form-control" type="text" name="industry" placeholder="Enter industry" required>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="deadline"><b>Deadline</b></label>
+                                <input class="form-control" type="text" name="deadline" placeholder="Enter Deadline in weeks, months, or full date" >
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="salary"><b>Salary Expectatation</b></label>
+                                <input class="form-control" type="text" name="salary" placeholder="Enter salary range" >
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="recruitmentStatus"><b>Job Type</b></label>
+                                <select class="form-control" name="jobType" id="jobType" required>
+                                    <option disabled  selected="selected">Select</option>
+                                    <option value="Full-time">Full-Time</option>
+                                    <option value="Part-time">Part-Time</option>
+                                    <option value="Freelance">Freelance</option>
+                                    <option value="Voluntary">Voluntary</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="careerLevel"><b>Career Level</b></label>
+                                <select class="form-control" name="careerLevel" id="careerLevel" required>
+                                    <option disabled  selected="selected">Select</option>
+                                    <option value="Entry Level">Entry Level</option>
+                                    <option value="Mid-Level">Mid-Level</option>
+                                    <option value="Management">Management</option>
+                                    <option value="Executive">Executive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="experience"><b>Experience</b></label>
+                                <select class="form-control" name="experience" id="experience" required>
+                                    <option disabled selected="selected">Select</option>
+                                    <option value="0 - 1 year">0 - 1 year</option>
+                                    <option value="1 - 3 years">1 - 3 years</option>
+                                    <option value="3 - 5 years">3 - 5 years</option>
+                                    <option value="5 - 7 years">5 - 7 years</option>
+                                    <option value="8+ years">8+ years</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="about"><b>Company Description</b></label>
+                                <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Enter your description..." ></textarea>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="recruitment"><b>Responsibilities</b></label>
+                                <textarea class="form-control" name="responsibilities" id="responsibilities" cols="30" rows="10" placeholder="Enter your role..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="recruitment"><b>Qualification &amp; Skills</b></label>
+                                <textarea class="form-control" name="qualification" id="qualification" cols="30" rows="10" placeholder="Enter your qualification..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="applyMtd"><b>How to Apply</b></label>
+                                <textarea class="form-control" name="applyMtd" id="applyMtd" cols="10" rows="5" placeholder="Enter application method..." ></textarea>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="applyBtn"><b>Website to Apply?</b></label>
+                                <input class="form-control" type="text" name="applyBtn" id="applyBtn" placeholder="Enter link to apply if any..." >
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="seo_keywords"><b>SEO Keywords</b></label>
+                                <textarea class="form-control" name="seo_keywords" id="seo_keywords" cols="10" rows="5" placeholder="E.g jobs, accountant, coca cola..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="seo_description"><b>SEO Description</b></label>
+                                <textarea class="form-control" name="seo_description" id="seo_description" cols="10" rows="5" placeholder="Enter long description..." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row p-2">
+                            <div class="form-group">
+                                <label for="logo"><b>Image Link</b></label>
+                                <input type="text" class="form-control" name="logo" id="logo" placeholder="enter https://website.com or base 10 image link">
+                            </div>
+                        </div>
+                        <div class="form-group p-2">
+                            <button class="btn btn-primary" type="submit">Post Job</button>
+                        </div>
+                    </form>   
+                    
+                        <script>
+                            CKEDITOR.replace('responsibilities');
+                            CKEDITOR.replace('qualification');
+                        </script> 
+                </div>
+            </div>    
+        </div>
+
+
+
+
+</div>

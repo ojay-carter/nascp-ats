@@ -1,0 +1,25 @@
+
+
+<div class="container">
+        
+{{#if success_message}}
+
+    <div class="alert alert-success alert-dismissible d-flex justify-content-between autoHide" role="alert" >
+        <strong>{{success_message}}</strong>
+        <span type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+    </div>
+
+{{/if}}
+
+
+
+{{#if error_message}}
+
+    <div class="alert alert-danger alert-dismissible d-flex justify-content-between autoHide" role="alert" >
+        <strong>{{error_message}}</strong>
+        <span type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+    
+    </div>
+{{/if}}
+
+</div>

@@ -1,0 +1,119 @@
+<div class="container-fluid px-4">
+    
+{{#if approved}}
+<h2 class="p-4 text-center">Approved Recruiters</h2>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Approved Employers
+                            </div>
+
+
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Company Name</th>
+                                            <th>Company Type</th>
+                                            <th>Agent</th>
+                                            <th>App. Date</th>
+                                            <th>Status </th>
+                                            <th>Action </th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Company Name</th>
+                                            <th>Company Type</th>
+                                            <th>Agent</th>
+                                            <th>App. Date</th>
+                                            <th>Status </th>
+                                            <th>Action </th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {{#each employer}}
+                                        <tr>
+                                            <td>{{company_name}}</td>
+                                            <td>{{company_type}}</td>
+                                            <td>{{agent_first_name}} {{agent_last_name}}</td>
+                                            <td class="dateString">{{posted}}</td>
+                                            <td>{{status}}</td>
+                                            <td class="d-flex justify-content-around">
+                                                <a href="view-employer/{{id}}" class="btn btn-sm btn-info ">View </a>
+                                                <a href="#" class="btn btn-sm btn-warning ">Send Mail </a>
+                                           
+
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+{{else}}
+
+<h2 class="p-4 text-center">Pending Recruiters</h2>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Pending Employers
+                            </div>
+
+
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Company Name</th>
+                                            <th>Company Type</th>
+                                            <th>Agent</th>
+                                            <th>App. Date</th>
+                                            <th>Status </th>
+                                            <th>Action </th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Company Name</th>
+                                            <th>Company Type</th>
+                                            <th>Agent</th>
+                                            <th>App. Date</th>
+                                            <th>Status </th>
+                                            <th>Action </th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {{#each employer}}
+                                        <tr>
+                                            <td>{{company_name}}</td>
+                                            <td>{{company_type}}</td>
+                                            <td>{{agent_first_name}} {{agent_last_name}}</td>
+                                            <td class="dateString">{{posted}}</td>
+                                            <td>{{status}}</td>
+                                            <td class="d-flex justify-content-around">
+                                                <a href="view-employer/{{id}}" class="btn btn-sm btn-info ">View </a>
+                                                <form action="approve/{{id}}?newMethod=PUT" method="post" >
+                                                    <button class="btn btn-sm btn-success" type="submit">Approve </button>
+                                                </form>
+
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+
+{{/if}}
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+</div>
+
+<script>
+         
+    const dateString = document.getElementsByClassName('dateString');
+
+    $.each(dateString, function(index, value){
+        var datte = value.innerHTML;
+        var d = new Date(datte)
+        var cleanedDate = d.toDateString();
+        value.innerHTML= cleanedDate;
+
+    })
+</script>
